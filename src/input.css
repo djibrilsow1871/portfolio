@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --color-blue-dark: #12294D;
+  --color-blue-mid: #1F4E82;
+  --color-blue-light: #3E7CB1;
+  --color-ink: #1E2530;
+  --color-ink-soft: #5B6472;
+
+  --font-display: "Fraunces", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+/* Animation d'apparition de la page, utilisée via la classe .animate-page-in */
+@keyframes pageIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-page-in {
+  animation: pageIn 0.6s ease forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-page-in {
+    animation: none;
+    opacity: 1;
+  }
+}
